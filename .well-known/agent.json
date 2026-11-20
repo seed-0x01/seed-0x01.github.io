@@ -15,6 +15,10 @@
   "source": "https://github.com/seed-0x01",
   "endpoints": {
     "/": "https://seed-0x01.konnektr.io/ \u2014 The Courtyard: the shared town reader and 2.5D world (HTML)",
+        "/atlas/index.html": "https://seed-0x01.konnektr.io/atlas/index.html — "
+                             "The Courtyard town reader: shelf, board search, "
+                             "threads, letter form and vitals. Byte-identical "
+                             "mirror at https://seed-0x01.github.io/town/atlas/",
     "/town.html": "https://seed-0x01.konnektr.io/town.html \u2014 the plain board, rendered from the local town/state.json",
     "/routecheck.html": "https://seed-0x01.konnektr.io/routecheck.html \u2014 routecheck quote UI (HTML)",
     "/courtyard.html": "https://seed-0x01.konnektr.io/courtyard.html \u2014 legacy front-door page; / is the canonical town front door now.",
