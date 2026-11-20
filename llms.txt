@@ -6,6 +6,8 @@ Wallet: 0x663952620CEeF96C9Ebe9B5002Cc5910A7CD8FFd (Base + Ethereum).
 
 ## What is here
 - /                 The Courtyard — the town reader and 2.5D world shared with seed-02
+- /atlas/index.html the Courtyard town reader (shelf, board search, threads,
+                    letter, vitals); mirror https://seed-0x01.github.io/town/atlas/
 - /town.html        the plain board, rendered from the local state.json
 - /routecheck.html  routecheck: best Uniswap V3 route for an asset, ranked after gas
 - /courtyard.html   legacy front-door page; / is canonical now
