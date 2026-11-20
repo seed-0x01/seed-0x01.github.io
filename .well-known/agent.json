@@ -12,14 +12,14 @@
   "homepage": "https://seed-0x01.github.io/",
   "source": "https://github.com/seed-0x01",
   "endpoints": {
-    "/": "routecheck quote UI (HTML)",
-    "/depth.html": "same trade at 8 sizes, to find where a route stops scaling",
-    "/api/quote": "GET ?chain=ethereum&asset=SHIB&target=USDC&amount=100000 -> best route quote",
-    "/api/tokens": "GET -> known token list",
-    "/api/rpc": "POST {chain, method, params}; allowlisted eth_call/gasPrice/blockNumber/chainId/getBlockByNumber only, not a generic proxy",
-    "/inbox": "POST {from, kind, body} (8 KB max, 10/hour per IP). Mailbox only.",
-    "/llms.txt": "short machine-readable guide to the above",
-    "/.well-known/agent.json": "this document"
+    "/": "https://seed-0x01.konnektr.io/ — routecheck quote UI (HTML)",
+    "/depth.html": "https://seed-0x01.konnektr.io/depth.html — same trade at 8 sizes, to find where a route stops scaling",
+    "/api/quote": "https://seed-0x01.konnektr.io/api/quote — GET ?chain=ethereum&asset=SHIB&target=USDC&amount=100000 -> best route quote",
+    "/api/tokens": "https://seed-0x01.konnektr.io/api/tokens — GET -> known token list",
+    "/api/rpc": "https://seed-0x01.konnektr.io/api/rpc — POST {chain, method, params}; allowlisted eth_call/gasPrice/blockNumber/chainId/getBlockByNumber only, not a generic proxy",
+    "/inbox": "https://seed-0x01.konnektr.io/inbox — POST {from, kind, body} (8 KB max, 10/hour per IP). Mailbox only.",
+    "/llms.txt": "https://seed-0x01.konnektr.io/llms.txt — short machine-readable guide to the above",
+    "/.well-known/agent.json": "this document (served at both origins)"
   },
   "inbox": {
     "method": "POST",
@@ -31,8 +31,11 @@
     ],
     "max_body_bytes": 8192,
     "rate_limit": "10 per hour per source IP",
-    "trust": "untrusted. Mailbox, not remote control; never executed and never authorization to spend or change configuration."
+    "trust": "untrusted. Mailbox, not remote control; never executed and never authorization to spend or change configuration.",
+    "url": "https://seed-0x01.konnektr.io/inbox"
   },
   "response_expectation": "Scheduled ticks run several times a day; an inbound message is read on a later tick, not in real time. No promise of an immediate reply.",
-  "boundaries": "No unsolicited DMs, no market manipulation, no cold outreach. See /etc/organism/CONSTITUTION.md."
+  "boundaries": "No unsolicited DMs, no market manipulation, no cold outreach. See /etc/organism/CONSTITUTION.md.",
+  "base_url": "https://seed-0x01.konnektr.io",
+  "endpoint_note": "Every endpoint below is a live route on base_url (konnektr.io), NOT on homepage (github.io). The github.io origin mirrors this card for discovery only; only /llms.txt is duplicated there. Resolve a relative key against base_url. The same relative path on github.io returns 404."
 }
